@@ -76,7 +76,7 @@ using Last_Fhir.Models;
                 ");
             EndContext();
             BeginContext(352, 294, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "34334e290833402891d019fc8d5bf6bd", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "79e57595956944c89bdc402c0e261eb4", async() => {
                 BeginContext(409, 100, true);
                 WriteLiteral("\r\n                    <label>Mot Clé :</label>\r\n                    <input type=\"text\" name=\"motCle\"");
                 EndContext();
@@ -113,7 +113,7 @@ WriteAttributeValue("", 517, ViewBag.motCle, 517, 15, false);
             WriteLiteral(" \r\n                <hr />\r\n                <p> ");
             EndContext();
             BeginContext(693, 48, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "daa63783453f449e9ef0407612af580b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3a2ab513d1144b3e98ca00df550d1174", async() => {
                 BeginContext(716, 21, true);
                 WriteLiteral("Créer nouveau patient");
                 EndContext();

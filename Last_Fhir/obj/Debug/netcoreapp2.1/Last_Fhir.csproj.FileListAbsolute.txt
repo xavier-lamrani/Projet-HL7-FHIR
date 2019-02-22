@@ -91,4 +91,3 @@ C:\Users\MIAGE\source\repos\HL7-FHIR\Last_Fhir\obj\Debug\netcoreapp2.1\Last_Fhir
 C:\Users\MIAGE\source\repos\HL7-FHIR\Last_Fhir\obj\Debug\netcoreapp2.1\Last_Fhir.dll
 C:\Users\MIAGE\source\repos\HL7-FHIR\Last_Fhir\obj\Debug\netcoreapp2.1\Last_Fhir.pdb
 C:\Users\MIAGE\source\repos\HL7-FHIR\Last_Fhir\obj\Debug\netcoreapp2.1\Last_Fhir.csproj.CopyComplete
-C:\Users\MIAGE\source\repos\HL7-FHIR\Last_Fhir\obj\Debug\netcoreapp2.1\Last_Fhir.csprojAssemblyReference.cache
