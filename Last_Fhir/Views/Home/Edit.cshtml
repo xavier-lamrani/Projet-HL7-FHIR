@@ -20,7 +20,7 @@
                     @Html.ValidationMessageFor(p => p.Id, "", new { @class = "text-danger" })
                 </div>
 
-                <div class="form-group">                   
+                <div class="form-group">
                     <label class="control-label">Préfix</label>
                     @Html.TextBoxFor(p => p.Name[0].PrefixElement[0].Value, new { @class = "form-control" })
                     @Html.ValidationMessageFor(p => p.Name[0].PrefixElement[0].Value, "", new { @class = "text-danger" })
@@ -50,10 +50,27 @@
                     @Html.ValidationMessageFor(p => p.BirthDate, "", new { @class = "text-danger" })
                 </div>
 
+                <div class="form-group">
+
+                    <label class="control-label">Telephone</label>
+                    @Html.TextBoxFor(p => p.Telecom[0].Use, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(p => p.Telecom[0], "", new { @class = "text-danger" })
+                </div>
 
                 <div class="form-group">
-                    <input type="submit" value="Editer" class="btn btn-primary" />
+
+                    <label class="control-label">Adresse</label>
+                    @Html.TextBoxFor(p => p.Address[0].LineElement[0].Value, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(p => p.Address[0].Line, "", new { @class = "text-danger" })
                 </div>
+
+            
+
+              
+                <div class="form-group">
+                    <input type="submit" value="Enregistrer" class="btn btn-primary" />
+                </div>
+
             </form>
         </div>
     </div>

@@ -17,7 +17,7 @@
                     <button type="submit" class="btn btn-primary">Chercher</button>
                 </form> 
                 <hr />
-                <p> <a asp-action="Create">Créer un nouveau</a></p>
+                <p> <a asp-action="Create">Créer nouveau patient</a></p>
             </div>
 
            
@@ -90,7 +90,7 @@
                             </td>
                             <td>
                                 @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                                @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { onclick = "return confirm('êtes vous sure de supprimer?');" })
+                                @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { onclick = "return confirm('êtes vous sure de supprimer ?');" })
 
                             </td>
                         </tr>

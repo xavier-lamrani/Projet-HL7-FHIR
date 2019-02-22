@@ -7,7 +7,7 @@
 
 <hr />
 <div class="panel panel-primary">
-    <div class="panel-heading">Saisir un nouveau Patient</div>
+    <div class="panel-heading">Créer nouveau patient</div>
     <div class="row panel-body">
         <div class="col-md-4">
             <form asp-action="Create">
@@ -32,7 +32,7 @@
 
                 <div class="form-group">
                     <label class="control-label">Date de naissance</label>
-                    <input asp-for="BirthDate" class="form-control" />
+                    <input asp-for="BirthDate" class="form-control" placeholder="yyyy-mm-dd" />
                     <span asp-validation-for="BirthDate" class="text-danger"></span>
                 </div>
                 <div class="form-group">
@@ -48,14 +48,14 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label">Adress</label>
-                    <input asp-for="Address[0].Line" class="form-control" />
+                    <label class="control-label">Adresse</label>
+                    <input asp-for="Address[0].LineElement[0].Value" class="form-control" />
                     <span asp-validation-for="Address[0].Line" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
                     <label class="control-label">Ville</label>
-                    <input asp-for="Address[0].City" class="form-control" />
+                    <input asp-for="Address[0].CityElement.Value" class="form-control" />
                     <span asp-validation-for="Address[0].City" class="text-danger"></span>
                 </div>
                 <div class="form-group">
