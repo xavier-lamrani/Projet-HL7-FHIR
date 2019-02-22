@@ -1,0 +1,105 @@
+﻿@model IEnumerable<Hl7.Fhir.Model.Patient>
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+<h2>Home</h2>
+
+<p>
+    <a asp-action="Create">Nouveau Patient</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+              ID
+            </th>
+            <th>
+           Préfix
+            </th>
+            <th>
+             Nom
+            </th>
+            <th>
+             Prénom
+            </th>
+            <th>
+              Date de naissance
+            </th>
+            <th>
+               Sexe
+            </th>
+            <th>
+                Status marital
+            </th>
+            <th>
+             Téléphone
+            </th>
+            <th>
+                Adresse
+            </th>
+            <th>
+         Ville
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @{ var Prefix = item.Name[0].Prefix;
+                    @Html.DisplayFor(modelItem => Prefix) 
+                    }
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name[0].Family)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name[0].Given)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BirthDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender.Value)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaritalStatus.Coding[0].Display)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Telecom[0].Value)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address[0].Line)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address[0].City)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {  id=item.Id  }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+            }
+       
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
