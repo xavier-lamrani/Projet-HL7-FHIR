@@ -4,102 +4,100 @@
     ViewData["Title"] = "Home";
 }
 
-<h2>Home</h2>
+<h2>Application de gestion de Patients</h2>
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">Liste des Patient</div>
+        <div class="panel-default">
+            <div class="container">
 
-<p>
-    <a asp-action="Create">Nouveau Patient</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
+                <form class="form-group" method="get" asp-action="Index">
+                    <label>Mot Clé :</label>
+                    <input type="text" name="motCle" value="@ViewBag.motCle" />
+                    <button type="submit" class="btn btn-primary">Chercher</button>
+                </form>
+            </div>
 
-            <th>
-              ID
-            </th>
-            <th>
-           Préfix
-            </th>
-            <th>
-             Nom
-            </th>
-            <th>
-             Prénom
-            </th>
-            <th>
-              Date de naissance
-            </th>
-            <th>
-               Sexe
-            </th>
-            <th>
-                Status marital
-            </th>
-            <th>
-             Téléphone
-            </th>
-            <th>
-                Adresse
-            </th>
-            <th>
-         Ville
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            <td>
-                @{ var Prefix = item.Name[0].Prefix;
-                    @Html.DisplayFor(modelItem => Prefix) 
+            <p> <a asp-action="Create">Créer un nouveau</a></p>
+           
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+
+                        <th>
+                            Nom complet
+
+                        </th>
+                        <th>
+                            Date de naissance
+                        </th>
+                        <th>
+                            Sexe
+                        </th>
+                        <th>
+                            Status marital
+                        </th>
+                        <th>
+                            Téléphone
+                        </th>
+                        <th>
+                            Adresse
+                        </th>
+                        <th>
+                            Ville
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+
+                            @Html.HiddenFor(modelItem => item.Id)
+
+                            <td>
+
+                                <p>
+                                    @{ var Prefix = item.Name[0].Prefix;
+                                        @Html.DisplayFor(modelItem => Prefix)}
+                                    @Html.DisplayFor(modelItem => item.Name[0].Family)
+                                    @Html.DisplayFor(modelItem => item.Name[0].Given)
+                                </p>
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.BirthDate)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Gender.Value)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MaritalStatus.Coding[0].Display)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Telecom[0].Value)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Address[0].Line)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Address[0].City)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                                @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { onclick = "return confirm('êtes vous sure de supprimer?');" })
+
+                            </td>
+                        </tr>
                     }
-                </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name[0].Family)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name[0].Given)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BirthDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Gender.Value)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MaritalStatus.Coding[0].Display)
-            </td>
-
-            <td>
-                @Html.DisplayFor(modelItem => item.Telecom[0].Value)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Address[0].Line)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Address[0].City)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new {  id=item.Id  }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-            }
-       
-
-    
-    </tbody>
-</table>
 
 
 
-
-
-
-
-
+                </tbody>
+            </table>
+        </div>
+            </div>
+        </div>

@@ -19,11 +19,20 @@ namespace Last_Fhir.Controllers
         {
         this.metier = metier;
         }
-        public IActionResult Index()
+        public IActionResult Index(string motCle = "")
         {
-         
-            IEnumerable<Patient> prods = metier.findall();
+
+            // IEnumerable<Patient> prods = metier.findall();
+            IEnumerable<Patient> prods = metier.PatientsParMC(motCle);
             return View("Home", prods);
+        }
+
+        public IActionResult Rechercher(string motCle="")
+        {
+            motCle = ViewBag.motCle;
+          
+            IEnumerable<Patient> patients = metier.PatientsParMC(motCle);
+            return View("Home",patients);
         }
 
 
@@ -71,6 +80,22 @@ namespace Last_Fhir.Controllers
             }
             else { return View("Edit"); }
         }
+
+        [HttpGet]
+        public IActionResult Delete(string id)
+        {
+            metier.Delete(id);
+            return RedirectToAction("Index");
+        }
+
+  
+
+
+
+
+
+
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

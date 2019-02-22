@@ -12995,11 +12995,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MIAGE\\source\\repos\\Last_Fhir - Copie\\Last_Fhir\\Last_Fhir.csproj",
+      "projectUniqueName": "C:\\Users\\MIAGE\\source\\repos\\HL7-FHIR\\Last_Fhir\\Last_Fhir.csproj",
       "projectName": "Last_Fhir",
-      "projectPath": "C:\\Users\\MIAGE\\source\\repos\\Last_Fhir - Copie\\Last_Fhir\\Last_Fhir.csproj",
+      "projectPath": "C:\\Users\\MIAGE\\source\\repos\\HL7-FHIR\\Last_Fhir\\Last_Fhir.csproj",
       "packagesPath": "C:\\Users\\MIAGE\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MIAGE\\source\\repos\\Last_Fhir - Copie\\Last_Fhir\\obj\\",
+      "outputPath": "C:\\Users\\MIAGE\\source\\repos\\HL7-FHIR\\Last_Fhir\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
