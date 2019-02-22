@@ -33,7 +33,7 @@ git clone https://github.com/xavier-lamrani/Projet-HL7-FHIR/
 
 ## Running the app
 
-We run the app by opening the project on Microsoft Visual Studio or by openig (~/path/git/Projet-HL7-FHIR/Last_Fhir.sln) and running the project
+We run the app by opening the project on Microsoft Visual Studio or by opening (~/path/git/Projet-HL7-FHIR/Last_Fhir.sln) and running the project
 
 The app will be available on 
 
