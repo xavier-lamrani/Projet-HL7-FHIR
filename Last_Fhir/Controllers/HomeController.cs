@@ -105,14 +105,14 @@ namespace Last_Fhir.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "Gestion des patient en utilisant le protocole FHIR.";
 
             return View();
         }
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "Contacter nous.";
 
             return View();
         }

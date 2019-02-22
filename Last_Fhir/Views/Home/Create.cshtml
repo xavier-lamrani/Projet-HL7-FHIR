@@ -3,7 +3,7 @@
     ViewData["Title"] = "Nouveau Patient";
 }
 
-<h2>Nouveau</h2>
+<h2>Nouveau patient</h2>
 
 <hr />
 <div class="panel panel-primary">
@@ -19,7 +19,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label  class="control-label">Nom</label>
+                    <label class="control-label">Nom</label>
                     <input asp-for="Name[0].Family" class="form-control" />
                     <span asp-validation-for="Name[0].Family" class="text-danger"></span>
                 </div>
@@ -40,6 +40,24 @@
                     <input asp-for="Gender" class="form-control" />
                     <span asp-validation-for="Gender" class="text-danger"></span>
                 </div>
+
+                <div class="form-group">
+                    <label class="control-label">Telephone</label>
+                    <input asp-for="Telecom[0].Value" class="form-control" />
+                    <span asp-validation-for="Telecom[0].Value" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">Adress</label>
+                    <input asp-for="Address[0].Line" class="form-control" />
+                    <span asp-validation-for="Address[0].Line" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">Ville</label>
+                    <input asp-for="Address[0].City" class="form-control" />
+                    <span asp-validation-for="Address[0].City" class="text-danger"></span>
+                </div>
                 <div class="form-group">
                     <input type="submit" value="Enregistrer" class="btn btn-primary" />
                 </div>
@@ -49,7 +67,7 @@
 
 </div>
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Retour à la liste</a>
 </div>
 
 @section Scripts {

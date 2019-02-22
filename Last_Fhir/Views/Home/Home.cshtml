@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Hl7.Fhir.Model.Patient>
 
 @{
-    ViewData["Title"] = "Home";
+    ViewData["Title"] = "Accueil";
 }
 
 <h2>Application de gestion de Patients</h2>
@@ -15,10 +15,12 @@
                     <label>Mot Clé :</label>
                     <input type="text" name="motCle" value="@ViewBag.motCle" />
                     <button type="submit" class="btn btn-primary">Chercher</button>
-                </form>
+                </form> 
+                <hr />
+                <p> <a asp-action="Create">Créer un nouveau</a></p>
             </div>
 
-            <p> <a asp-action="Create">Créer un nouveau</a></p>
+           
            
 
             <table class="table table-striped">
