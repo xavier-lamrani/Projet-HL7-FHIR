@@ -1,1 +1,5 @@
-# HL7-FHIR
+# Application de gestion de patients
+
+Projet DAGS 
+
+### Pré-requis
